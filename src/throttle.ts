@@ -1,20 +1,19 @@
 export function throttle(
-  func: () => void,
+  fn: () => void,
   delay: number
 ): () => void {
   let throttling = false;
   
   return function () {
     if (!throttling) {
-      func();
+      fn();
       throttling = true;
       setTimeout(() => {
         throttling = false;
-      }, delay);
+      }, 1000);
     }
   };
 }
-
 
 
 
