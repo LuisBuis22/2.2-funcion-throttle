@@ -14,4 +14,8 @@ function throttle(fn, delay) {
     };
 }
 exports.throttle = throttle;
-//# sourceMappingURL=throttle.js.map
+function pensando() {
+    console.log("Dame 5 segundos para pensar");
+}
+const throttlePensando = throttle(pensando, 5000);
+//# sourceMappingURL=pensar-controller.js.map
